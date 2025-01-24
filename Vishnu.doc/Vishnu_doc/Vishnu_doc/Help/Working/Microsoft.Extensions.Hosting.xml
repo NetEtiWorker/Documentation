@@ -34,12 +34,9 @@
         </member>
         <member name="P:Microsoft.Extensions.Hosting.ConsoleLifetimeOptions.SuppressStatusMessages">
             <summary>
-            Gets or sets a value that indicates if host lifetime status messages should be suppressed, such as on startup.
+            Indicates if host lifetime status messages should be suppressed such as on startup.
+            The default is false.
             </summary>
-            <value>
-            <see langword="true"/> if host lifetime status messages should be suppressed.
-            The default is <see langword="false"/>.
-            </value>
         </member>
         <member name="T:Microsoft.Extensions.Hosting.Host">
             <summary>
@@ -137,7 +134,7 @@
         </member>
         <member name="T:Microsoft.Extensions.Hosting.HostApplicationBuilder">
             <summary>
-            Represents a hosted applications and services builder that helps manage configuration, logging, lifetime, and more.
+            Represents a hosted applications and services builder which helps manage configuration, logging, lifetime, and more.
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.Hosting.HostApplicationBuilder.#ctor">
@@ -210,7 +207,7 @@
         </member>
         <member name="M:Microsoft.Extensions.Hosting.HostApplicationBuilder.Build">
             <summary>
-            Builds the host. This method can only be called once.
+            Build the host. This can only be called once.
             </summary>
             <returns>An initialized <see cref="T:Microsoft.Extensions.Hosting.IHost"/>.</returns>
         </member>
@@ -226,12 +223,9 @@
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.DisableDefaults">
             <summary>
-            Gets or sets a value that indicates whether the <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder"/> instance is configured with pre-configured defaults.
-            </summary>
-            <value>
-            <see langword="false"/> if the <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder"/> instance is configured with pre-configured defaults.
+            If <see langword="false"/>, configures the <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder"/> instance with pre-configured defaults.
             This has a similar effect to calling <see cref="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureDefaults(Microsoft.Extensions.Hosting.IHostBuilder,System.String[])"/>.
-            </value>
+            </summary>
             <remarks>
               The following defaults are applied to the <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder"/>:
                 * set the <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath"/> to the result of <see cref="M:System.IO.Directory.GetCurrentDirectory"/>
@@ -246,29 +240,29 @@
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.Args">
             <summary>
-            Gets or sets the command-line arguments to add to the <see cref="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Configuration"/>.
+            The command line arguments to add to the <see cref="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Configuration"/>.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.Configuration">
             <summary>
-            Gets or sets the initial configuration sources to be added to the <see cref="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Configuration"/>. These sources can influence
+            Initial configuration sources to be added to the <see cref="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Configuration"/>. These sources can influence
             the <see cref="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Environment"/> through the use of <see cref="T:Microsoft.Extensions.Hosting.HostDefaults"/> keys. Disposing the built
             <see cref="T:Microsoft.Extensions.Hosting.IHost"/> disposes the <see cref="T:Microsoft.Extensions.Configuration.ConfigurationManager"/>.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.EnvironmentName">
             <summary>
-            Gets or sets the environment name.
+            The environment name.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.ApplicationName">
             <summary>
-            Gets or sets the application name.
+            The application name.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.ContentRootPath">
             <summary>
-            Gets or sets the content root path.
+            The content root path.
             </summary>
         </member>
         <member name="T:Microsoft.Extensions.Hosting.HostBuilder">
@@ -283,7 +277,7 @@
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostBuilder.Properties">
             <summary>
-            Gets a central location for sharing state between components during the host building process.
+            A central location for sharing state between components during the host building process.
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.Hosting.HostBuilder.ConfigureHostConfiguration(System.Action{Microsoft.Extensions.Configuration.IConfigurationBuilder})">
@@ -343,7 +337,7 @@
             <summary>
             Run the given actions to initialize the host. This can only be called once.
             </summary>
-            <returns>An initialized <see cref="T:Microsoft.Extensions.Hosting.IHost"/>.</returns>
+            <returns>An initialized <see cref="T:Microsoft.Extensions.Hosting.IHost"/></returns>
             <remarks>Adds basic services to the host such as application lifetime, host environment, and logging.</remarks>
         </member>
         <member name="T:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions">
@@ -353,7 +347,7 @@
         </member>
         <member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.UseEnvironment(Microsoft.Extensions.Hosting.IHostBuilder,System.String)">
             <summary>
-            Specifies the environment to be used by the host. To avoid the environment being overwritten by a default
+            Specify the environment to be used by the host. To avoid the environment being overwritten by a default
             value, ensure this is called after defaults are configured.
             </summary>
             <param name="hostBuilder">The <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder"/> to configure.</param>
@@ -362,7 +356,7 @@
         </member>
         <member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.UseContentRoot(Microsoft.Extensions.Hosting.IHostBuilder,System.String)">
             <summary>
-            Specifies the content root directory to be used by the host. To avoid the content root directory being
+            Specify the content root directory to be used by the host. To avoid the content root directory being
             overwritten by a default value, ensure this is called after defaults are configured.
             </summary>
             <param name="hostBuilder">The <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder"/> to configure.</param>
@@ -371,7 +365,7 @@
         </member>
         <member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.UseDefaultServiceProvider(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.DependencyInjection.ServiceProviderOptions})">
             <summary>
-            Specifies the <see cref="T:System.IServiceProvider"/> to be the default one.
+            Specify the <see cref="T:System.IServiceProvider"/> to be the default one.
             </summary>
             <param name="hostBuilder">The <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder"/> to configure.</param>
             <param name="configure">The delegate that configures the <see cref="T:System.IServiceProvider"/>.</param>
@@ -379,7 +373,7 @@
         </member>
         <member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.UseDefaultServiceProvider(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.DependencyInjection.ServiceProviderOptions})">
             <summary>
-            Specifies the <see cref="T:System.IServiceProvider"/> to be the default one.
+            Specify the <see cref="T:System.IServiceProvider"/> to be the default one.
             </summary>
             <param name="hostBuilder">The <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder"/> to configure.</param>
             <param name="configure">The delegate that configures the <see cref="T:System.IServiceProvider"/>.</param>
@@ -387,7 +381,7 @@
         </member>
         <member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureLogging(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.Logging.ILoggingBuilder})">
             <summary>
-            Adds a delegate for configuring the provided <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder"/>. This can be called multiple times.
+            Adds a delegate for configuring the provided <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder"/>. This may be called multiple times.
             </summary>
             <param name="hostBuilder">The <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> to configure.</param>
             <param name="configureLogging">The delegate that configures the <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder"/>.</param>
@@ -395,7 +389,7 @@
         </member>
         <member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureLogging(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Logging.ILoggingBuilder})">
             <summary>
-            Adds a delegate for configuring the provided <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder"/>. This can be called multiple times.
+            Adds a delegate for configuring the provided <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder"/>. This may be called multiple times.
             </summary>
             <param name="hostBuilder">The <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> to configure.</param>
             <param name="configureLogging">The delegate that configures the <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder"/>.</param>
@@ -503,7 +497,7 @@
         </member>
         <member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureMetrics(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder})">
             <summary>
-            Adds a delegate for configuring the provided <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder"/>. This can be called multiple times.
+            Adds a delegate for configuring the provided <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder"/>. This may be called multiple times.
             </summary>
             <param name="hostBuilder">The <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> to configure.</param>
             <param name="configureMetrics">The delegate that configures the <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder"/>.</param>
@@ -511,7 +505,7 @@
         </member>
         <member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureMetrics(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder})">
             <summary>
-            Adds a delegate for configuring the provided <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder"/>. This can be called multiple times.
+            Adds a delegate for configuring the provided <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder"/>. This may be called multiple times.
             </summary>
             <param name="hostBuilder">The <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> to configure.</param>
             <param name="configureMetrics">The delegate that configures the <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder"/>.</param>
@@ -519,12 +513,12 @@
         </member>
         <member name="T:Microsoft.Extensions.Hosting.HostOptions">
             <summary>
-            Options for <see cref="T:Microsoft.Extensions.Hosting.IHost"/>.
+            Options for <see cref="T:Microsoft.Extensions.Hosting.IHost"/>
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostOptions.ShutdownTimeout">
             <summary>
-            Gets or sets the default timeout for <see cref="M:Microsoft.Extensions.Hosting.IHost.StopAsync(System.Threading.CancellationToken)"/>.
+            The default timeout for <see cref="M:Microsoft.Extensions.Hosting.IHost.StopAsync(System.Threading.CancellationToken)"/>.
             </summary>
             <remarks>
             This timeout also encompasses all host services implementing
@@ -534,7 +528,7 @@
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostOptions.StartupTimeout">
             <summary>
-            Gets or sets the default timeout for <see cref="M:Microsoft.Extensions.Hosting.IHost.StartAsync(System.Threading.CancellationToken)"/>.
+            The default timeout for <see cref="M:Microsoft.Extensions.Hosting.IHost.StartAsync(System.Threading.CancellationToken)"/>.
             </summary>
             <remarks>
             This timeout also encompasses all host services implementing
@@ -544,23 +538,17 @@
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostOptions.ServicesStartConcurrently">
             <summary>
-            Gets or sets a value that indicates if the <see cref="T:Microsoft.Extensions.Hosting.IHost"/> will start registered instances of <see cref="T:Microsoft.Extensions.Hosting.IHostedService"/> concurrently or sequentially.
+            Determines if the <see cref="T:Microsoft.Extensions.Hosting.IHost"/> will start registered instances of <see cref="T:Microsoft.Extensions.Hosting.IHostedService"/> concurrently or sequentially. Defaults to false.
             </summary>
-            <value>
-            <see langword="true"/> if the <see cref="T:Microsoft.Extensions.Hosting.IHost"/> will start registered instances of <see cref="T:Microsoft.Extensions.Hosting.IHostedService"/> concurrently; <see langword="false"/> if the <see cref="T:Microsoft.Extensions.Hosting.IHost"/> will start registered instances sequentially. The default is <see langword="false"/> .
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostOptions.ServicesStopConcurrently">
             <summary>
-            Gets or sets a value that indicates if the <see cref="T:Microsoft.Extensions.Hosting.IHost"/> will stop registered instances of <see cref="T:Microsoft.Extensions.Hosting.IHostedService"/> concurrently or sequentially.
+            Determines if the <see cref="T:Microsoft.Extensions.Hosting.IHost"/> will stop registered instances of <see cref="T:Microsoft.Extensions.Hosting.IHostedService"/> concurrently or sequentially. Defaults to false.
             </summary>
-            <value>
-            <see langword="true"/> if the <see cref="T:Microsoft.Extensions.Hosting.IHost"/> will stop registered instances of <see cref="T:Microsoft.Extensions.Hosting.IHostedService"/> concurrently; <see langword="false"/> if the <see cref="T:Microsoft.Extensions.Hosting.IHost"/> will stop registered instances sequentially. The default is <see langword="false"/> .
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Hosting.HostOptions.BackgroundServiceExceptionBehavior">
             <summary>
-            Gets or sets the behavior the <see cref="T:Microsoft.Extensions.Hosting.IHost"/> will follow when any of
+            The behavior the <see cref="T:Microsoft.Extensions.Hosting.IHost"/> will follow when any of
             its <see cref="T:Microsoft.Extensions.Hosting.BackgroundService"/> instances throw an unhandled exception.
             </summary>
             <remarks>
@@ -580,19 +568,19 @@
         </member>
         <member name="P:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.ApplicationStarted">
             <summary>
-            Gets a cancellation token. Triggered when the application host has fully started and is about to wait
+            Triggered when the application host has fully started and is about to wait
             for a graceful shutdown.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.ApplicationStopping">
             <summary>
-            Gets a cancellation token. Triggered when the application host is performing a graceful shutdown.
-            Request might still be in flight. Shutdown will block until this event completes.
+            Triggered when the application host is performing a graceful shutdown.
+            Request may still be in flight. Shutdown will block until this event completes.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.ApplicationStopped">
             <summary>
-            Gets a cancellation token. Triggered when the application host is performing a graceful shutdown.
+            Triggered when the application host is performing a graceful shutdown.
             All requests should be complete at this point. Shutdown will block
             until this event completes.
             </summary>

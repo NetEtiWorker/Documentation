@@ -109,12 +109,12 @@
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions">
             <summary>
-            Extension methods for adding configuration-related options services to the DI container.
+            Extension methods for adding configuration related options services to the DI container.
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
-            Registers a configuration instance that <typeparamref name="TOptions" /> will bind against.
+            Registers a configuration instance which TOptions will bind against.
             </summary>
             <typeparam name="TOptions">The type of options being configured.</typeparam>
             <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the services to.</param>
@@ -123,7 +123,7 @@
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
-            Registers a configuration instance that <typeparamref name="TOptions" /> will bind against.
+            Registers a configuration instance which TOptions will bind against.
             </summary>
             <typeparam name="TOptions">The type of options being configured.</typeparam>
             <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the services to.</param>
@@ -133,7 +133,7 @@
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})">
             <summary>
-            Registers a configuration instance that <typeparamref name="TOptions" /> will bind against.
+            Registers a configuration instance which TOptions will bind against.
             </summary>
             <typeparam name="TOptions">The type of options being configured.</typeparam>
             <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the services to.</param>
@@ -143,7 +143,7 @@
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})">
             <summary>
-            Registers a configuration instance that <typeparamref name="TOptions" /> will bind against.
+            Registers a configuration instance which TOptions will bind against.
             </summary>
             <typeparam name="TOptions">The type of options being configured.</typeparam>
             <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the services to.</param>

@@ -155,7 +155,7 @@
         </member>
         <member name="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider">
             <summary>
-            Provides configuration key-value pairs that are obtained from the command line.
+            A command line based <see cref="T:Microsoft.Extensions.Configuration.ConfigurationProvider"/>.
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IDictionary{System.String,System.String})">
@@ -167,17 +167,17 @@
         </member>
         <member name="P:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider.Args">
             <summary>
-            Gets the command-line arguments.
+            The command line arguments.
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider.Load">
             <summary>
-            Loads the configuration data from the command-line arguments.
+            Loads the configuration data from the command line args.
             </summary>
         </member>
         <member name="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource">
             <summary>
-            Represents command-line arguments as an <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSource"/>.
+            Represents command line arguments as an <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSource"/>.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource.SwitchMappings">
@@ -187,7 +187,7 @@
         </member>
         <member name="P:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource.Args">
             <summary>
-            Gets or sets the command line arguments.
+            Gets or sets the command line args.
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)">
@@ -195,7 +195,7 @@
             Builds the <see cref="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider"/> for this source.
             </summary>
             <param name="builder">The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/>.</param>
-            <returns>A <see cref="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider"/>.</returns>
+            <returns>A <see cref="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider"/></returns>
         </member>
         <member name="M:System.ThrowHelper.ThrowIfNull(System.Object,System.String)">
             <summary>Throws an <see cref="T:System.ArgumentNullException"/> if <paramref name="argument"/> is null.</summary>

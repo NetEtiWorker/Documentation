@@ -6,25 +6,22 @@
     <members>
         <member name="T:Microsoft.Extensions.Configuration.BinderOptions">
             <summary>
-            Specifies options used by the <see cref="T:Microsoft.Extensions.Configuration.ConfigurationBinder"/>.
+            Options class used by the <see cref="T:Microsoft.Extensions.Configuration.ConfigurationBinder"/>.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Configuration.BinderOptions.BindNonPublicProperties">
             <summary>
-            Gets or sets a value that indicates whether the binder attempts to set all properties or only public properties.
+            When false (the default), the binder will only attempt to set public properties.
+            If true, the binder will attempt to set all non read-only properties.
             </summary>
-            <value>
-            <see langword="true" /> if the binder attempts to set all non-read-only properties; <see langword="false" /> if only public properties are set.
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Configuration.BinderOptions.ErrorOnUnknownConfiguration">
             <summary>
-            Gets or sets a value that indicates whether exceptions are thrown when converting a value or when a configuration
-            key is found for which the provided model object doesn't have an appropriate property that matches the key's name.
+            When false (the default), no exceptions are thrown when trying to convert a value or when a configuration
+            key is found for which the provided model object does not have an appropriate property which matches the key's name.
+            When true, an <see cref="T:System.InvalidOperationException"/> is thrown with a description
+            of the error.
             </summary>
-            <value>
-            <see langword="true" /> if an <see cref="T:System.InvalidOperationException"/> is thrown with a description; <see langword="false" /> if no exceptions are thrown. The default is <see langword="false" />.
-            </value>
         </member>
         <member name="T:Microsoft.Extensions.Configuration.ConfigurationBinder">
             <summary>
@@ -133,34 +130,6 @@
             <param name="key">The key of the configuration section's value to convert.</param>
             <param name="defaultValue">The default value to use if no value is found.</param>
             <returns>The converted value.</returns>
-        </member>
-        <member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.ResetPropertyValue(System.Reflection.PropertyInfo,System.Object,Microsoft.Extensions.Configuration.BinderOptions)">
-            <summary>
-            Reset the property value to the value from the property getter. This is useful for properties that have a getter or setters that perform some logic changing the object state.
-            </summary>
-            <param name="property">The property to reset.</param>
-            <param name="instance">The instance to reset the property on.</param>
-            <param name="options">The binder options.</param>
-            <remarks>
-            This method doesn't do any configuration binding. It just resets the property value to the value from the property getter.
-            This method called only when creating an instance using a primary constructor with parameters names match properties names.
-            </remarks>
-        </member>
-        <member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.CreateInstance(System.Type,Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Configuration.BinderOptions,System.Reflection.ParameterInfo[]@)">
-            <summary>
-            Create an instance of the specified type.
-            </summary>
-            <param name="type">The type to create an instance of.</param>
-            <param name="config">The configuration to bind to the instance.</param>
-            <param name="options">The binder options.</param>
-            <param name="constructorParameters">The parameters of the constructor used to create the instance.</param>
-            <returns>The created instance.</returns>
-            <exception cref="T:System.InvalidOperationException">If the type cannot be created.</exception>
-            <remarks>
-            constructorParameters will not be null only when using a constructor with a parameters which get their values from the configuration
-            This happen when using types having properties match the constructor parameter names. `record` types are an example.
-            In such cases we need to carry the parameters list to avoid binding the properties again during BindProperties.
-            </remarks>
         </member>
         <member name="M:System.ThrowHelper.ThrowIfNull(System.Object,System.String)">
             <summary>Throws an <see cref="T:System.ArgumentNullException"/> if <paramref name="argument"/> is null.</summary>

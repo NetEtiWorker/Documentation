@@ -24,7 +24,7 @@
         <member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderConfigurationExtensions.AddConfiguration(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
             Reads metrics configuration from the provided <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> section and configures
-            which <see cref="T:System.Diagnostics.Metrics.Meter">Meters</see>, <see cref="T:System.Diagnostics.Metrics.Instrument">Instruments</see>, and <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener">IMetricsListeners</see> are enabled.
+            which <see cref="T:System.Diagnostics.Metrics.Meter"/>'s, <see cref="T:System.Diagnostics.Metrics.Instrument"/>'s, and <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener"/>'s are enabled.
             </summary>
             <param name="builder">The <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder"/>.</param>
             <param name="configuration">The <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> section to load.</param>
@@ -32,12 +32,12 @@
         </member>
         <member name="T:Microsoft.Extensions.Diagnostics.Metrics.ConsoleMetrics">
             <summary>
-            Provides constants for the Console metrics listener.
+            Constants for the Console metrics listener.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Diagnostics.Metrics.ConsoleMetrics.DebugListenerName">
             <summary>
-            Gets the name of the listener used in configuration and enabling instruments.
+            The name of the listener used in configuration and enabling instruments.
             </summary>
         </member>
         <member name="T:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderConsoleExtensions">
@@ -72,7 +72,7 @@
             <param name="configure">A callback to configure the <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder"/>.</param>
             <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> so that additional calls can be chained.</returns>
         </member>
-        <member name="M:System.Diagnostics.DiagnosticsHelper.CompareTags(System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+        <member name="M:System.Diagnostics.DiagnosticsHelper.CompareTags(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
             <summary>
             Compares two tag collections for equality.
             </summary>

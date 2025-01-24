@@ -8,7 +8,9 @@
 				Sie den Vorgang abschließen können und Ihre Spende wirksam wird.
 			</p><p>
 				Auf jeden Fall freue ich mich über Ihren Einsatz.
-			</p><p><a href="https://www.paypal.com/donate?business=neteti@neteti.de" target="_blank"><img src="paypal-button.gif" alt="Spenden via PayPal" /></a><!--p>
+			</p><p><!--<a href="https://www.paypal.com/donate?business=neteti@neteti.de" target="_blank">
+						<img src="paypal-button.gif" alt="Spenden via PayPal" />
+					</a>--><!--p>
         	          <a href="https://www.paypal.com/donate/?hosted_button_id=G8VDT54WPYWFL" target="_blank">
         		        <img src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_LG.gif" alt="zur sicheren PayPal Seite">
         	          </a>

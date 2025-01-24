@@ -45,11 +45,11 @@
             <summary>
             Creates a new instance of <see cref="T:Microsoft.Extensions.Logging.Console.ConfigurationConsoleLoggerSettings"/>.
             </summary>
-            <param name="configuration">The configuration values.</param>
+            <param name="configuration">provides access to configuration values.</param>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConfigurationConsoleLoggerSettings.ChangeToken">
             <summary>
-            Gets the <see cref="T:Microsoft.Extensions.Primitives.IChangeToken"/> that propagates notifications that a change has occurred.
+            Gets the <see cref="T:Microsoft.Extensions.Primitives.IChangeToken"/> propagates notifications that a change has occurred.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConfigurationConsoleLoggerSettings.IncludeScopes">
@@ -67,14 +67,14 @@
             <summary>
             Gets the log level for the specified switch.
             </summary>
-            <param name="name">The name of the switch to look up.</param>
-            <param name="level">When this method returns, contains the value of the switch if it is found. If the switch is not found, the method returns false and sets the value of level to LogLevel.None</param>
-            <returns><see langword="true" /> if the switch was found, otherwise <see langword="false" />.</returns>
+            <param name="name">The name of the switch to look up</param>
+            <param name="level">An out parameter that will be set to the value of the switch if it is found. If the switch is not found, the method returns false and sets the value of level to LogLevel.None</param>
+            <returns>True if the switch was found, otherwise false.</returns>
             <exception cref="T:System.InvalidOperationException"></exception>
         </member>
         <member name="T:Microsoft.Extensions.Logging.Console.ConsoleFormatter">
             <summary>
-            Allows custom log messages formatting.
+            Allows custom log messages formatting
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.Logging.Console.ConsoleFormatter.#ctor(System.String)">
@@ -93,7 +93,7 @@
             Writes the log message to the specified TextWriter.
             </summary>
             <remarks>
-            If the formatter wants to write colors to the console, it can do so by embedding ANSI color codes into the string.
+            if the formatter wants to write colors to the console, it can do so by embedding ANSI color codes into the string
             </remarks>
             <param name="logEntry">The log entry.</param>
             <param name="scopeProvider">The provider of scope data.</param>
@@ -107,17 +107,17 @@
         </member>
         <member name="F:Microsoft.Extensions.Logging.Console.ConsoleFormatterNames.Simple">
             <summary>
-            Reserved name for simple console formatter.
+            Reserved name for simple console formatter
             </summary>
         </member>
         <member name="F:Microsoft.Extensions.Logging.Console.ConsoleFormatterNames.Json">
             <summary>
-            Reserved name for json console formatter.
+            Reserved name for json console formatter
             </summary>
         </member>
         <member name="F:Microsoft.Extensions.Logging.Console.ConsoleFormatterNames.Systemd">
             <summary>
-            Reserved name for systemd console formatter.
+            Reserved name for systemd console formatter
             </summary>
         </member>
         <member name="T:Microsoft.Extensions.Logging.Console.ConsoleFormatterOptions">
@@ -132,27 +132,18 @@
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleFormatterOptions.IncludeScopes">
             <summary>
-            Gets or sets a value that indicates whether scopes are included.
+            Includes scopes when <see langword="true" />.
             </summary>
-            <value>
-            <see langword="true" /> if scopes are included.
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleFormatterOptions.TimestampFormat">
             <summary>
-            Gets or sets the format string used to format timestamp in logging messages.
+            Gets or sets format string used to format timestamp in logging messages. Defaults to <c>null</c>.
             </summary>
-            <value>
-            The default is <see langword="null" />.
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleFormatterOptions.UseUtcTimestamp">
             <summary>
-            Gets or sets a value that indicates whether or not UTC timezone should be used to format timestamps in logging messages.
+            Gets or sets indication whether or not UTC timezone should be used to format timestamps in logging messages. Defaults to <c>false</c>.
             </summary>
-            <value>
-            The default is <see langword="false" />.
-            </value>
         </member>
         <member name="T:Microsoft.Extensions.Logging.Console.ConsoleLogger">
             <summary>
@@ -160,9 +151,6 @@
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.Logging.Console.ConsoleLogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})">
-            <inheritdoc />
-        </member>
-        <member name="M:Microsoft.Extensions.Logging.Console.ConsoleLogger.LogRecords(System.Collections.Generic.IEnumerable{Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord})">
             <inheritdoc />
         </member>
         <member name="M:Microsoft.Extensions.Logging.Console.ConsoleLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)">
@@ -173,17 +161,17 @@
         </member>
         <member name="T:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat">
             <summary>
-            Describes the format of <see cref="T:Microsoft.Extensions.Logging.Console.ConsoleLogger" /> messages.
+            Format of <see cref="T:Microsoft.Extensions.Logging.Console.ConsoleLogger" /> messages.
             </summary>
         </member>
         <member name="F:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat.Default">
             <summary>
-            Produce messages in the default console format.
+            Produces messages in the default console format.
             </summary>
         </member>
         <member name="F:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat.Systemd">
             <summary>
-            Produce messages in a format suitable for console output to the systemd journal.
+            Produces messages in a format suitable for console output to the systemd journal.
             </summary>
         </member>
         <member name="T:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions">
@@ -193,72 +181,48 @@
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.DisableColors">
             <summary>
-            Gets or sets a value that indicates whether colors are disabled.
+            Disables colors when <see langword="true" />.
             </summary>
-            <value>
-            <see langword="true" /> if colors are disabled.
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.Format">
             <summary>
-            Gets or sets the log message format.
+            Gets or sets log message format. Defaults to <see cref="F:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat.Default" />.
             </summary>
-            <value>
-            The default value is <see cref="F:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat.Default" />.
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName">
             <summary>
-            Gets or sets the name of the log message formatter to use.
+            Name of the log message formatter to use. Defaults to <c>simple</c>.
             </summary>
-            <value>
-            The default value is <see langword="simple" />.
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.IncludeScopes">
             <summary>
-            Gets or sets a value that indicates whether scopes are included.
+            Includes scopes when <see langword="true" />.
             </summary>
-            <value>
-            <see langword="true" /> if scopes are included.
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.LogToStandardErrorThreshold">
             <summary>
-            Gets or sets value indicating the minimum level of messages that get written to <c>Console.Error</c>.
+            Gets or sets value indicating the minimum level of messages that would get written to <c>Console.Error</c>.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.TimestampFormat">
             <summary>
-            Gets or sets the format string used to format timestamp in logging messages.
+            Gets or sets format string used to format timestamp in logging messages. Defaults to <c>null</c>.
             </summary>
-            <value>
-            The default value is <see langword="null" />.
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.UseUtcTimestamp">
             <summary>
-            Gets or sets a value that indicates whether UTC timezone should be used to format timestamps in logging messages.
+            Gets or sets indication whether or not UTC timezone should be used to format timestamps in logging messages. Defaults to <c>false</c>.
             </summary>
-            <value>
-            <see langword="true"/> if the UTC timezone should be used to format timestamps. The default value is <see langword="false" />.
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.QueueFullMode">
             <summary>
-            Gets or sets the desired console logger behavior when the queue becomes full.
+            Gets or sets the desired console logger behavior when the queue becomes full. Defaults to <c>Wait</c>.
             </summary>
-            <value>
-            The default value is <see langword="wait" />.
-            </value>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.MaxQueueLength">
             <summary>
-            Gets or sets the maximum number of enqueued messages.
+            Gets or sets the maximum number of enqueued messages. Defaults to 2500.
             </summary>
-            <value>
-            The default value is 2500.
-            </value>
         </member>
         <member name="T:Microsoft.Extensions.Logging.Console.ConsoleLoggerProvider">
             <summary>
@@ -276,7 +240,7 @@
             Creates an instance of <see cref="T:Microsoft.Extensions.Logging.Console.ConsoleLoggerProvider"/>.
             </summary>
             <param name="options">The options to create <see cref="T:Microsoft.Extensions.Logging.Console.ConsoleLogger"/> instances with.</param>
-            <param name="formatters">Log formatters added for <see cref="T:Microsoft.Extensions.Logging.Console.ConsoleLogger"/> instances.</param>
+            <param name="formatters">Log formatters added for <see cref="T:Microsoft.Extensions.Logging.Console.ConsoleLogger"/> insteaces.</param>
         </member>
         <member name="M:Microsoft.Extensions.Logging.Console.ConsoleLoggerProvider.CreateLogger(System.String)">
             <inheritdoc />
@@ -289,7 +253,7 @@
         </member>
         <member name="T:Microsoft.Extensions.Logging.Console.ConsoleLoggerQueueFullMode">
             <summary>
-            Describes the console logger behavior when the queue becomes full.
+            Determines the console logger behavior when the queue becomes full.
             </summary>
         </member>
         <member name="F:Microsoft.Extensions.Logging.Console.ConsoleLoggerQueueFullMode.Wait">
@@ -360,7 +324,7 @@
         </member>
         <member name="T:Microsoft.Extensions.Logging.Console.JsonConsoleFormatterOptions">
             <summary>
-            Options for the built-in JSON console log formatter.
+            Options for the built-in json console log formatter.
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.Logging.Console.JsonConsoleFormatterOptions.#ctor">
@@ -375,7 +339,7 @@
         </member>
         <member name="T:Microsoft.Extensions.Logging.Console.LoggerColorBehavior">
             <summary>
-            Describes when to use color when logging messages.
+            Determines when to use color when logging messages.
             </summary>
         </member>
         <member name="F:Microsoft.Extensions.Logging.Console.LoggerColorBehavior.Default">
@@ -388,12 +352,12 @@
         </member>
         <member name="F:Microsoft.Extensions.Logging.Console.LoggerColorBehavior.Enabled">
             <summary>
-            Enable color for logging.
+            Enable color for logging
             </summary>
         </member>
         <member name="F:Microsoft.Extensions.Logging.Console.LoggerColorBehavior.Disabled">
             <summary>
-            Disable color for logging.
+            Disable color for logging
             </summary>
         </member>
         <member name="T:Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions">
@@ -408,16 +372,13 @@
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions.ColorBehavior">
             <summary>
-            Gets or sets the behavior that describes when to use color when logging messages.
+            Determines when to use color when logging messages.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions.SingleLine">
             <summary>
-            Gets or sets a value that indicates whether the entire message is logged in a single line.
+            When <see langword="true" />, the entire message gets logged in a single line.
             </summary>
-            <value>
-            <see langword="true" /> if the entire message is logged in a single line.
-            </value>
         </member>
         <member name="T:Microsoft.Extensions.Logging.ConsoleFormatterConfigureOptions">
             <summary>

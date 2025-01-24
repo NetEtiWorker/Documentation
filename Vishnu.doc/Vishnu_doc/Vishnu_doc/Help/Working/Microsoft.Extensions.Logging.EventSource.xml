@@ -59,9 +59,8 @@
         </member>
         <member name="T:Microsoft.Extensions.Logging.EventSource.LoggingEventSource">
              <summary>
-             Bridges all ILogger-based logging to EventSource/EventListener logging.
-             </summary>
-             <remarks>
+             The LoggingEventSource is the bridge from all ILogger based logging to EventSource/EventListener logging.
+            
              You turn this logging on by enabling the EventSource called
             
                   Microsoft-Extensions-Logging
@@ -123,7 +122,7 @@
                          Console.WriteLine("Logger {0}: {1}", eventData.Payload[2], eventData.Payload[4]);
                  }
              }
-             </remarks>
+             </summary>
         </member>
         <member name="T:Microsoft.Extensions.Logging.EventSource.LoggingEventSource.Keywords">
             <summary>
@@ -156,13 +155,13 @@
              The one and only instance of the LoggingEventSource.
             </summary>
         </member>
-        <member name="M:Microsoft.Extensions.Logging.EventSource.LoggingEventSource.FormattedMessage(Microsoft.Extensions.Logging.LogLevel,System.Int32,System.String,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:Microsoft.Extensions.Logging.EventSource.LoggingEventSource.FormattedMessage(Microsoft.Extensions.Logging.LogLevel,System.Int32,System.String,System.Int32,System.String,System.String)">
             <summary>
             FormattedMessage() is called when ILogger.Log() is called. and the FormattedMessage keyword is active
             This only gives you the human readable formatted message.
             </summary>
         </member>
-        <member name="M:Microsoft.Extensions.Logging.EventSource.LoggingEventSource.Message(Microsoft.Extensions.Logging.LogLevel,System.Int32,System.String,System.Int32,System.String,Microsoft.Extensions.Logging.EventSource.ExceptionInfo,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.String,System.String,System.String)">
+        <member name="M:Microsoft.Extensions.Logging.EventSource.LoggingEventSource.Message(Microsoft.Extensions.Logging.LogLevel,System.Int32,System.String,System.Int32,System.String,Microsoft.Extensions.Logging.EventSource.ExceptionInfo,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
             <summary>
             Message() is called when ILogger.Log() is called. and the Message keyword is active
             This gives you the logged information in a programmatic format (arguments are key-value pairs)
@@ -210,14 +209,14 @@
         </member>
         <member name="M:Microsoft.Extensions.Logging.EventSourceLoggerFactoryExtensions.AddEventSourceLogger(Microsoft.Extensions.Logging.ILoggerFactory)">
             <summary>
-            Adds a logger that writes messages to the <see cref="T:Microsoft.Extensions.Logging.EventSource.LoggingEventSource"/> instance.
+            Adds an logger that writes messages to the <see cref="T:Microsoft.Extensions.Logging.EventSource.LoggingEventSource"/> instance.
             </summary>
             <param name="factory">The extension method argument.</param>
             <returns>The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> so that additional calls can be chained.</returns>
         </member>
         <member name="M:Microsoft.Extensions.Logging.EventSourceLoggerFactoryExtensions.AddEventSourceLogger(Microsoft.Extensions.Logging.ILoggingBuilder)">
             <summary>
-            Adds a logger that writes messages to the <see cref="T:Microsoft.Extensions.Logging.EventSource.LoggingEventSource"/> instance.
+            Adds an logger that writes messages to the <see cref="T:Microsoft.Extensions.Logging.EventSource.LoggingEventSource"/> instance.
             </summary>
             <param name="builder">The extension method argument.</param>
             <returns>The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder"/> so that additional calls can be chained.</returns>

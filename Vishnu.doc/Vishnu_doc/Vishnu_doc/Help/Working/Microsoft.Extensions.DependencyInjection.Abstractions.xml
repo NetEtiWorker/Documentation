@@ -11,25 +11,25 @@
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(System.IServiceProvider,System.Type,System.Object[])">
             <summary>
-            Instantiates a type with constructor arguments provided directly and/or from an <see cref="T:System.IServiceProvider"/>.
+            Instantiate a type with constructor arguments provided directly and/or from an <see cref="T:System.IServiceProvider"/>.
             </summary>
-            <param name="provider">The service provider used to resolve dependencies.</param>
-            <param name="instanceType">The type to activate.</param>
+            <param name="provider">The service provider used to resolve dependencies</param>
+            <param name="instanceType">The type to activate</param>
             <param name="parameters">Constructor arguments not provided by the <paramref name="provider"/>.</param>
-            <returns>An activated object of type instanceType.</returns>
+            <returns>An activated object of type instanceType</returns>
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(System.Type,System.Type[])">
             <summary>
-            Creates a delegate that will instantiate a type with constructor arguments provided directly
+            Create a delegate that will instantiate a type with constructor arguments provided directly
             and/or from an <see cref="T:System.IServiceProvider"/>.
             </summary>
-            <param name="instanceType">The type to activate.</param>
+            <param name="instanceType">The type to activate</param>
             <param name="argumentTypes">
-            The types of objects, in order, that will be passed to the returned function as its second parameter.
+            The types of objects, in order, that will be passed to the returned function as its second parameter
             </param>
             <returns>
             A factory that will instantiate instanceType using an <see cref="T:System.IServiceProvider"/>
-            and an argument array containing objects matching the types defined in argumentTypes.
+            and an argument array containing objects matching the types defined in argumentTypes
             </returns>
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory``1(System.Type[])">
@@ -59,17 +59,17 @@
             <summary>
             Retrieve an instance of the given type from the service provider. If one is not found then instantiate it directly.
             </summary>
-            <typeparam name="T">The type of the service.</typeparam>
-            <param name="provider">The service provider used to resolve dependencies.</param>
-            <returns>The resolved service or created instance.</returns>
+            <typeparam name="T">The type of the service</typeparam>
+            <param name="provider">The service provider used to resolve dependencies</param>
+            <returns>The resolved service or created instance</returns>
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetServiceOrCreateInstance(System.IServiceProvider,System.Type)">
             <summary>
             Retrieve an instance of the given type from the service provider. If one is not found then instantiate it directly.
             </summary>
-            <param name="provider">The service provider.</param>
-            <param name="type">The type of the service.</param>
-            <returns>The resolved service or created instance.</returns>
+            <param name="provider">The service provider</param>
+            <param name="type">The type of the service</param>
+            <returns>The resolved service or created instance</returns>
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperNullReferenceException">
             <summary>
@@ -611,7 +611,8 @@
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider">
             <summary>
-            Retrieves services using a key and a type.
+            IKeyedServiceProvider is a service provider that can be used to retrieve services using a key in addition
+            to a type.
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetKeyedService(System.Type,System.Object)">
@@ -620,9 +621,7 @@
             </summary>
             <param name="serviceType">An object that specifies the type of service object to get.</param>
             <param name="serviceKey">An object that specifies the key of service object to get.</param>
-            <returns><para>A service object of type <paramref name="serviceType"/>.</para>
-            <para>-or-</para>
-            <para><see langword="null"/> if there is no service object of type <paramref name="serviceType"/>.</para></returns>
+            <returns> A service object of type serviceType. -or- null if there is no service object of type serviceType.</returns>
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetRequiredKeyedService(System.Type,System.Object)">
             <summary>
@@ -636,12 +635,12 @@
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.KeyedService">
             <summary>
-            Provides static APIs for use with <see cref="T:Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider"/>.
+            Statics for use with <see cref="T:Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider"/>.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.DependencyInjection.KeyedService.AnyKey">
             <summary>
-            Gets a key that matches any key.
+            Represents a key that matches any key.
             </summary>
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.IServiceCollection">
@@ -658,19 +657,19 @@
             <summary>
             Creates a container builder from an <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
             </summary>
-            <param name="services">The collection of services.</param>
+            <param name="services">The collection of services</param>
             <returns>A container builder that can be used to create an <see cref="T:System.IServiceProvider"/>.</returns>
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1.CreateServiceProvider(`0)">
             <summary>
             Creates an <see cref="T:System.IServiceProvider"/> from the container builder.
             </summary>
-            <param name="containerBuilder">The container builder.</param>
-            <returns>An <see cref="T:System.IServiceProvider"/> instance.</returns>
+            <param name="containerBuilder">The container builder</param>
+            <returns>An <see cref="T:System.IServiceProvider"/></returns>
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.IServiceProviderIsKeyedService">
             <summary>
-            Provides methods to determine if the specified type with the specified service key is available
+            Optional service used to determine if the specified type with the specified service key is available
             from the <see cref="T:System.IServiceProvider"/>.
             </summary>
         </member>
@@ -685,7 +684,7 @@
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.IServiceProviderIsService">
             <summary>
-            Provides methods to determine if the specified type is available from the <see cref="T:System.IServiceProvider"/>.
+            Optional service used to determine if the specified type is available from the <see cref="T:System.IServiceProvider"/>.
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.IServiceProviderIsService.IsService(System.Type)">
@@ -697,29 +696,26 @@
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.IServiceScope">
             <summary>
-            Defines a disposable service scope.
-            </summary>
-            <remarks>
             The <see cref="M:System.IDisposable.Dispose"/> method ends the scope lifetime. Once Dispose
             is called, any scoped services that have been resolved from
             <see cref="P:Microsoft.Extensions.DependencyInjection.IServiceScope.ServiceProvider"/> will be
             disposed.
-            </remarks>
+            </summary>
         </member>
         <member name="P:Microsoft.Extensions.DependencyInjection.IServiceScope.ServiceProvider">
             <summary>
-            Gets the <see cref="T:System.IServiceProvider"/> used to resolve dependencies from the scope.
+            The <see cref="T:System.IServiceProvider"/> used to resolve dependencies from the scope.
             </summary>
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory">
             <summary>
-            Creates instances of <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceScope"/>, which is used to create
+            A factory for creating instances of <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceScope"/>, which is used to create
             services within a scope.
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory.CreateScope">
             <summary>
-            Create an <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceScope"/> that
+            Create an <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceScope"/> which
             contains an <see cref="T:System.IServiceProvider"/> used to resolve dependencies from a
             newly created scope.
             </summary>
@@ -755,12 +751,12 @@
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.ObjectFactory`1">
             <summary>
-            Returns the result of <see cref="M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory``1(System.Type[])" />, which is a delegate that specifies a factory method to call to instantiate an instance of type <typeparamref name="T" />.
+            The result of <see cref="M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory``1(System.Type[])"/>. A delegate to specify a factory method to call to instantiate an instance of type `T`
             </summary>
-            <typeparam name="T">The type of the instance that's returned.</typeparam>
+            <typeparam name="T">The type of the instance being returned</typeparam>
             <param name="serviceProvider">The <see cref="T:System.IServiceProvider"/> to get service arguments from.</param>
             <param name="arguments">Additional constructor arguments.</param>
-            <returns>An instance of type <typeparamref name="T" />.</returns>
+            <returns>An instance of T</returns>
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.ServiceCollection">
             <summary>
@@ -1927,7 +1923,8 @@
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.ServiceKeyAttribute">
             <summary>
-            Specifies the parameter to inject the key that was used for registration or resolution.
+            ServiceKeyAttribute can be specified on a parameter to inject the key that was used for
+            registration/resolution.
             </summary>
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.ServiceLifetime">
