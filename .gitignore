@@ -19,6 +19,7 @@ _Mock/
 **/Vishnu_doc/Help/fti/
 **/Vishnu_doc*.chm
 
+venv/
 Snapshots
 CommonSnapshots
 Job_und_Snapshot_Pfade.txt
