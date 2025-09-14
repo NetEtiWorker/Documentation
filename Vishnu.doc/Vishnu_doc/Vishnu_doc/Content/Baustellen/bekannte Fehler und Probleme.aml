@@ -68,15 +68,6 @@
 				</listItem>
 				<listItem>
 					<para>
-						<database>ProductionJobProvider</database> überarbeiten
-					</para>
-					<para>
-						Der ProductionJobProvider ist noch Spaghetti-Code - strukturieren und dabei Json-JobDescriptions als
-						zusätzliche Option implementieren.
-					</para>
-				</listItem>
-				<listItem>
-					<para>
 						<database>Bildschirmdarstellung</database>
 					</para>
 					<para>

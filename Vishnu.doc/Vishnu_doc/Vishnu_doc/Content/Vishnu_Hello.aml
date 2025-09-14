@@ -69,10 +69,10 @@
 				<para>
 					Wie schon oben skizziert, ist <token>V</token> eine Software-Lösung zur Überwachung und Steuerung von
 					beliebigen Anwender-Prozessen. Ihre Prozesse können simultan oder in Abhängigkeit voneinander (oder beides)
-					verarbeitet werden. Sie definieren die Zusammenhänge anhand einer einfachen Beschreibungssprache (XML).
+					verarbeitet werden. Sie definieren die Zusammenhänge einfach in Json- oder Xml-Textdateien.
 					Die einzelnen Prozesse werden hierbei nach logischen Gesichtspunkten zu Jobs zusammengefasst.
 					<token>V</token> stellt die Jobs mit ihren Akteuren übersichtlich, wahlweise in einer Baumdarstellung
-					oder als Listen, dar.
+					oder als Listen, dar.<lineBreak/>
 					Die Akteure innerhalb der Jobs können verschiedene weitere Aktionen auslösen, z.B. Meldungen, Mails,
 					andere Jobs, etc. Praktisch alles, was von <token>V</token> verwaltet werden soll, kann von Ihnen frei
 					bestimmt werden, dazu gehören

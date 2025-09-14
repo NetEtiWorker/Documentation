@@ -27,7 +27,8 @@
       </para>
       <para>
         <token>V</token>-<languageKeyword>Jobs</languageKeyword> und deren Elemente wie zum Beispiel <languageKeyword>Checker</languageKeyword>
-        können über verschiedene Parameter in der <languageKeyword>JobDescription.xml</languageKeyword> gesteuert werden.
+        können über verschiedene Parameter in der <languageKeyword>JobDescription.json</languageKeyword> bzw. <languageKeyword>JobDescription.xml</languageKeyword>
+		gesteuert werden.
         Eine Liste von Parametereinstellungen für Jobs und deren Elemente finden Sie weiter unten in diesem Kapitel bei <link xlink:href="#JobParameter">Job Parameter</link>.
       </para>
     </introduction>
@@ -83,8 +84,11 @@
             </para>
             <alert class="note">
 				<para>
+					Die Vishnu.exe.config.user kann in <languageKeyword>Json</languageKeyword> oder <languageKeyword>Xml</languageKeyword> vorliegen.
+			</para>
+				<para>
 					Die Reihenfolge der Parameterangaben ist in der <link xlink:href="9b9475bc-f8a9-4e7a-a84a-373276329b00" />
-					unerheblich. Sie müssen sich nur innerhalb von &lt;appSettings&gt; und &lt;/appSettings&gt; befinden.
+					unerheblich.
 				</para>
 			</alert>
           </listItem>

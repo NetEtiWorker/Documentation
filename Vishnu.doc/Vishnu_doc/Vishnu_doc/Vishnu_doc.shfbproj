@@ -64,11 +64,11 @@
       <DocumentationSource sourceFile="$(VishnuRoot)\VishnuHome\Vishnu\Vishnu.Interchange\Vishnu.Interchange.csproj" />
       <DocumentationSource sourceFile="$(VishnuRoot)\VishnuHome\Vishnu\Vishnu.ViewModel\Vishnu.ViewModel.csproj" />
       <DocumentationSource sourceFile="$(VishnuRoot)\VishnuHome\Vishnu\Vishnu.WPF_UI\Vishnu.WPF_UI.csproj" />
-      <DocumentationSource sourceFile="$(VishnuRoot)\WorkFrame\XMLAccess\XMLAccess\XMLAccess.csproj" />
       <DocumentationSource sourceFile="$(VishnuRoot)\VishnuHome\ZoomBox\ZoomBox\ZoomBox.csproj" />
       <DocumentationSource sourceFile="$(VishnuRoot)\WorkFrame\IniAccess\IniAccess\IniAccess.csproj" />
       <DocumentationSource sourceFile="..\..\..\..\..\WorkFrame\QuickEdit\QuickEdit\QuickEdit.csproj" />
       <DocumentationSource sourceFile="..\..\..\..\VishnuHelpBrowser\VishnuHelpBrowser\VishnuHelpBrowser.csproj" />
+      <DocumentationSource sourceFile="..\..\..\..\..\WorkFrame\UserSettingsAccess\UserSettingsAccess\UserSettingsAccess.csproj" />
     </DocumentationSources>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="(global)" isDocumented="True">Globale Typen, Konstanten, Klassen und statische Funktionen</NamespaceSummaryItem>
@@ -98,7 +98,7 @@
       <NamespaceSummaryItem name="NetEti.ObjectSerializer" isDocumented="True">Objekt-Serilalisierung und De-Serialisierung</NamespaceSummaryItem>
       <NamespaceSummaryItem name="ResourceDictionaryCodeBehind" isDocumented="False" />
     </NamespaceSummaries>
-    <HelpFileVersion>8.3.0.0</HelpFileVersion>
+    <HelpFileVersion>8.4.0.0</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
@@ -195,6 +195,7 @@
     <None Include="Content\Konfiguration und Parameter\Vishnu.exe.config.user.aml" />
     <None Include="Content\VersionHistory\v8.2.1.0.aml" />
     <None Include="Content\VersionHistory\v8.3.0.0.aml" />
+    <None Include="Content\VersionHistory\v8.4.0.0.aml" />
     <None Include="Content\Vishnu unterstützen.aml" />
     <None Include="Content\FortgeschritteneThemen\Anforderungen an Anwender-Module.aml" />
     <None Include="Content\FortgeschritteneThemen\benannte Trigger und Logger.aml" />
@@ -277,9 +278,13 @@
     <None Include="Examples\UserChecker.cs" />
     <None Include="Examples\UserChecker_ReturnObject.cs" />
     <None Include="Examples\Vishnu.exe.config.user.default" />
+    <None Include="Examples\Vishnu.exe.config.user.default.json" />
     <None Include="Examples\Vishnu.exe.config.user.Part.xml" />
     <None Include="Examples\weatherchecker.log" />
   </ItemGroup>
+  <!-- geht nicht! ItemGroup>
+    <AdditionalContent Include="Content\Konfiguration und Parameter\Vishnu.exe.config.user.json.aml" />
+  </ItemGroup -->
   <ItemGroup>
     <Content Include="icons\Help.png" />
   </ItemGroup>
@@ -500,11 +505,11 @@
   <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
   <!-- The pre-build and post-build event properties must appear *after* the targets file import in order to be
 			 evaluated correctly. -->
-  <PropertyGroup>
+  <!--PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
     <PostBuildEvent>COPY "$(ProjectDir)..\..\..\VishnuHtmlHelpModifier\VishnuHtmlHelpModifier\Bin\Debug\net8.0\*.*" $(OutDir)
 $(OutDir)VishnuHtmlHelpModifier.exe</PostBuildEvent>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-  </PropertyGroup>
+  </PropertyGroup-->
 </Project>

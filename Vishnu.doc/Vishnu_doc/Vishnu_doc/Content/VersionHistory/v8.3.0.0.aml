@@ -27,7 +27,7 @@
 						<list class="bullet">
 							<listItem>
 								<para>
-									Beenden aller Slave-Prozesse (Meldungen, Logfenster),
+									Beenden aller Slave-Prozesse (Meldungen, Logfenster).
 								</para>
 							</listItem>
 							<listItem>
